@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function fetchList(params) {
   return request({
-    url: '/flashSession/list',
+    url:'/mall-admin/flashSession/list',
     method: 'get',
     params: params
   })
@@ -10,7 +10,7 @@ export function fetchList(params) {
 
 export function fetchSelectList(params) {
   return request({
-    url: '/flashSession/selectList',
+    url:'/mall-admin/flashSession/selectList',
     method: 'get',
     params: params
   })
@@ -18,7 +18,7 @@ export function fetchSelectList(params) {
 
 export function updateStatus(id, params) {
   return request({
-    url: '/flashSession/update/status/' + id,
+    url:'/mall-admin/flashSession/update/status/' + id,
     method: 'post',
     params: params
   })
@@ -26,14 +26,14 @@ export function updateStatus(id, params) {
 
 export function deleteSession(id) {
   return request({
-    url: '/flashSession/delete/' + id,
+    url:'/mall-admin/flashSession/delete/' + id,
     method: 'post'
   })
 }
 
 export function createSession(data) {
   return request({
-    url: '/flashSession/create',
+    url:'/mall-admin/flashSession/create',
     method: 'post',
     data: data
   })
@@ -41,7 +41,7 @@ export function createSession(data) {
 
 export function updateSession(id, data) {
   return request({
-    url: '/flashSession/update/' + id,
+    url:'/mall-admin/flashSession/update/' + id,
     method: 'post',
     data: data
   })

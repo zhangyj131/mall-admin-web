@@ -1,7 +1,7 @@
 import request from '@/utils/request'
 export function fetchList(params) {
   return request({
-    url:'/order/list',
+    url:'/mall-admin/order/list',
     method:'get',
     params:params
   })
@@ -9,7 +9,7 @@ export function fetchList(params) {
 
 export function closeOrder(params) {
   return request({
-    url:'/order/update/close',
+    url:'/mall-admin/order/update/close',
     method:'post',
     params:params
   })
@@ -17,7 +17,7 @@ export function closeOrder(params) {
 
 export function deleteOrder(params) {
   return request({
-    url:'/order/delete',
+    url:'/mall-admin/order/delete',
     method:'post',
     params:params
   })
@@ -25,7 +25,7 @@ export function deleteOrder(params) {
 
 export function deliveryOrder(data) {
   return request({
-    url:'/order/update/delivery',
+    url:'/mall-admin/order/update/delivery',
     method:'post',
     data:data
   });
@@ -33,14 +33,14 @@ export function deliveryOrder(data) {
 
 export function getOrderDetail(id) {
   return request({
-    url:'/order/'+id,
+    url:'/mall-admin/order/'+id,
     method:'get'
   });
 }
 
 export function updateReceiverInfo(data) {
   return request({
-    url:'/order/update/receiverInfo',
+    url:'/mall-admin/order/update/receiverInfo',
     method:'post',
     data:data
   });
@@ -48,7 +48,7 @@ export function updateReceiverInfo(data) {
 
 export function updateMoneyInfo(data) {
   return request({
-    url:'/order/update/moneyInfo',
+    url:'/mall-admin/order/update/moneyInfo',
     method:'post',
     data:data
   });
@@ -56,7 +56,7 @@ export function updateMoneyInfo(data) {
 
 export function updateOrderNote(params) {
   return request({
-    url:'/order/update/note',
+    url:'/mall-admin/order/update/note',
     method:'post',
     params:params
   })

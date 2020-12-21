@@ -1,7 +1,7 @@
 import request from '@/utils/request'
 export function fetchList(pid,params) {
   return request({
-    url:'/sku/'+pid,
+    url:'/mall-admin/sku/'+pid,
     method:'get',
     params:params
   })
@@ -9,7 +9,7 @@ export function fetchList(pid,params) {
 
 export function update(pid,data) {
   return request({
-    url:'/sku/update/'+pid,
+    url:'/mall-admin/sku/update/'+pid,
     method:'post',
     data:data
   })

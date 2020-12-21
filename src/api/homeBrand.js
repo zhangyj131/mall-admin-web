@@ -1,7 +1,7 @@
 import request from '@/utils/request'
 export function fetchList(params) {
   return request({
-    url:'/home/brand/list',
+    url:'/mall-admin/home/brand/list',
     method:'get',
     params:params
   })
@@ -9,7 +9,7 @@ export function fetchList(params) {
 
 export function updateRecommendStatus(data) {
   return request({
-    url:'/home/brand/update/recommendStatus',
+    url:'/mall-admin/home/brand/update/recommendStatus',
     method:'post',
     data:data
   })
@@ -17,7 +17,7 @@ export function updateRecommendStatus(data) {
 
 export function deleteHomeBrand(data) {
   return request({
-    url:'/home/brand/delete',
+    url:'/mall-admin/home/brand/delete',
     method:'post',
     data:data
   })
@@ -25,7 +25,7 @@ export function deleteHomeBrand(data) {
 
 export function createHomeBrand(data) {
   return request({
-    url:'/home/brand/create',
+    url:'/mall-admin/home/brand/create',
     method:'post',
     data:data
   })
@@ -33,7 +33,7 @@ export function createHomeBrand(data) {
 
 export function updateHomeBrandSort(params) {
   return request({
-    url:'/home/brand/update/sort/'+params.id,
+    url:'/mall-admin/home/brand/update/sort/'+params.id,
     method:'post',
     params:params
   })

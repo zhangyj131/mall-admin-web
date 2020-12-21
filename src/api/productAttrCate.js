@@ -1,7 +1,7 @@
 import request from '@/utils/request'
 export function fetchList(params) {
   return request({
-    url:'/productAttribute/category/list',
+    url:'/mall-admin/productAttribute/category/list',
     method:'get',
     params:params
   })
@@ -9,7 +9,7 @@ export function fetchList(params) {
 
 export function createProductAttrCate(data) {
   return request({
-    url:'/productAttribute/category/create',
+    url:'/mall-admin/productAttribute/category/create',
     method:'post',
     data:data
   })
@@ -17,21 +17,21 @@ export function createProductAttrCate(data) {
 
 export function deleteProductAttrCate(id) {
   return request({
-    url:'/productAttribute/category/delete/'+id,
+    url:'/mall-admin/productAttribute/category/delete/'+id,
     method:'get'
   })
 }
 
 export function updateProductAttrCate(id,data) {
   return request({
-    url:'/productAttribute/category/update/'+id,
+    url:'/mall-admin/productAttribute/category/update/'+id,
     method:'post',
     data:data
   })
 }
 export function fetchListWithAttr() {
   return request({
-    url:'/productAttribute/category/list/withAttr',
+    url:'/mall-admin/productAttribute/category/list/withAttr',
     method:'get'
   })
 }
