@@ -41,12 +41,13 @@
           key: '',
           ossaccessKeyId: '',
           dir: '',
-          host: ''
+          host: '',
+          callback:''
         },
         dialogVisible: false,
         dialogImageUrl:null,
         useOss:true, //使用oss->true;使用MinIO->false
-        ossUploadUrl:'http://macro-oss.oss-cn-shenzhen.aliyuncs.com',
+        ossUploadUrl:'http://zyj-oss1.oss-cn-beijing.aliyuncs.com',
         minioUploadUrl:'http://localhost:8080/minio/upload',
       };
     },
@@ -88,6 +89,7 @@
             _self.dataObj.key = response.data.dir + '/${filename}';
             _self.dataObj.dir = response.data.dir;
             _self.dataObj.host = response.data.host;
+            _self.dataObj.callback = response.data.callback;
             resolve(true)
           }).catch(err => {
             console.log(err)

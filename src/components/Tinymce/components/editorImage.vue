@@ -5,7 +5,7 @@
     </el-button>
     <el-dialog append-to-body :visible.sync="dialogVisible">
       <el-upload class="editor-slide-upload"
-                 action="http://macro-oss.oss-cn-shenzhen.aliyuncs.com"
+                 action="http://zyj-oss1.oss-cn-beijing.aliyuncs.com"
                  :data="dataObj"
                  :multiple="true"
                  :file-list="fileList"
@@ -44,7 +44,8 @@
           key: '',
           ossaccessKeyId: '',
           dir: '',
-          host: ''
+          host: '',
+          callback:''
         }
       }
     },
@@ -97,6 +98,7 @@
             _self.dataObj.key = response.data.dir + '/${filename}';
             _self.dataObj.dir = response.data.dir;
             _self.dataObj.host = response.data.host;
+            _self.dataObj.callback = response.data.callback;
             _self.listObj[fileName] = {hasSuccess: false, uid: file.uid, width: this.width, height: this.height};
             resolve(true)
           }).catch(err => {
